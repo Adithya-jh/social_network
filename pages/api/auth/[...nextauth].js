@@ -2,6 +2,7 @@ import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import DiscordProvider from "next-auth/providers/discord";
 import InstagramProvider from "next-auth/providers/instagram";
+import LinkedInProvider from "next-auth/providers/linkedin";
 
 export default NextAuth({
   // Configure one or more authentication providers
@@ -23,7 +24,13 @@ export default NextAuth({
     InstagramProvider({
       clientId: process.env.INSTAGRAM_CLIENT_ID,
       clientSecret: process.env.INSTAGRAM_CLIENT_SECRET
-    })
+    }),
+
+  
+      LinkedInProvider({
+        clientId: process.env.LINKEDIN_CLIENT_ID,
+        clientSecret: process.env.LINKEDIN_CLIENT_SECRET
+      }),
   ],
   callbacks: {
     async session({ session, token }) {
