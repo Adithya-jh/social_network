@@ -9,10 +9,14 @@ import {
   UserIcon,
   DotsCircleHorizontalIcon,
   DotsHorizontalIcon,
+
 } from "@heroicons/react/outline";
+
+import {TiGroupOutline} from "react-icons/ti"
 import SidebarLink from "./SidebarLink";
 import { signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
+import Link from "next/link";
 
 function Sidebar() {
   const { data: session } = useSession();
@@ -20,20 +24,24 @@ function Sidebar() {
   return (
     <div className="hidden sm:flex flex-col items-center xl:items-start xl:w-[340px] p-2 fixed h-full">
       <div className="flex items-center justify-center w-14 h-14 hoverAnimation p-0 xl:ml-24">
-        <Image src="https://rb.gy/ogau5a" width={30} height={30} />
+        {/* <Image src="https://rb.gy/ogau5a" width={30} height={30} /> */}
       </div>
       <div className="space-y-2.5 mt-4 mb-2.5 xl:ml-24">
+
         <SidebarLink text="Home" Icon={HomeIcon} active />
-        <SidebarLink text="Explore" Icon={HashtagIcon} />
-        <SidebarLink text="Notifications" Icon={BellIcon} />
+        <Link href="/explore">
+         <a><SidebarLink text="Explore" Icon={HashtagIcon} /></a> 
+        </Link>
+        
+        <SidebarLink text="Community" Icon={TiGroupOutline} />
         <SidebarLink text="Messages" Icon={InboxIcon} />
-        <SidebarLink text="Bookmarks" Icon={BookmarkIcon} />
-        <SidebarLink text="Lists" Icon={ClipboardListIcon} />
+        <SidebarLink text="Clubs" Icon={BookmarkIcon} />
+        <SidebarLink text="Activity" Icon={ClipboardListIcon} />
         <SidebarLink text="Profile" Icon={UserIcon} />
         <SidebarLink text="More" Icon={DotsCircleHorizontalIcon} />
       </div>
-      <button className="hidden xl:inline ml-auto bg-[#1d9bf0] text-white rounded-full w-56 h-[52px] text-lg font-bold shadow-md hover:bg-[#1a8cd8]">
-        Tweet
+      <button className="hidden xl:inline ml-auto bg-[#6a1edb] text-white rounded-full w-56 h-[52px] text-lg font-bold shadow-md hover:bg-[#6534e0]">
+        NETWORK
       </button>
       <div
         className="text-[#d9d9d9] flex items-center justify-center mt-auto hoverAnimation xl:ml-auto xl:-mr-5"

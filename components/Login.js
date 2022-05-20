@@ -1,17 +1,47 @@
 import { signIn } from "next-auth/react";
 import Image from "next/image";
+import World from '../World/world';
+import {useState} from "next"
+
 
 function Login({ providers }) {
+  // let world = new World()
+
+  // const world = () => {
+  //   //get reference to the container
+  //     const container = document.querySelector('.container');
+  //        //create an instance of the world app
+  //    const  world = new World(container);
+  //        //render the scene
+  //     world.start()
+  //    }
+    
+  //   world()
+  // const [world,setWorld] = useState("");
+
   return (
-    <div className="flex flex-col items-center space-y-20 pt-48">
-      <Image
+
+    <div className="flex flex-col items-center space-y-20 pt-48 justify-center">
+      {/* <Image
         src="/assets/logo.png"
         width={150}
         height={150}
-        objectFit="contain"
-      />
+        objectFit="conta
+        
+        in"
+      /> */}
 
-      <div className="flex flex-col space-y-7">
+{/* 
+      {
+      // const container = document.querySelector('.container');
+         //create an instance of the world app
+      world = new World( <div className="container"></div> )
+         //render the scene
+      world.start()
+
+      } */}
+    <div className="container"></div>
+      <div className="flex flex-col space-y-7 ">
         {Object.values(providers).map((provider) => (
           <div key={provider.name}>
             {/* https://devdojo.com/tailwindcss/buttons#_ */}
