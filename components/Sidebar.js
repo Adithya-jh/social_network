@@ -32,12 +32,27 @@ function Sidebar() {
         <Link href="/explore">
          <a><SidebarLink text="Explore" Icon={HashtagIcon} /></a> 
         </Link>
-        
-        <SidebarLink text="Community" Icon={TiGroupOutline} />
-        <SidebarLink text="Messages" Icon={InboxIcon} />
-        <SidebarLink text="Clubs" Icon={BookmarkIcon} />
-        <SidebarLink text="Activity" Icon={ClipboardListIcon} />
-        <SidebarLink text="Profile" Icon={UserIcon} />
+
+        <Link href="/community">
+          <a><SidebarLink text="Community" Icon={TiGroupOutline} /> </a>
+        </Link>
+
+        <Link href="/messages">
+          <a><SidebarLink text="Messages" Icon={InboxIcon} /></a>
+        </Link>
+
+        <Link href="/clubs">
+          <a><SidebarLink text="Clubs" Icon={BookmarkIcon} /> </a>
+        </Link>
+
+        <Link href="/activity">
+          <a><SidebarLink text="Activity" Icon={ClipboardListIcon} /> </a>
+        </Link>
+
+        <Link href="/profile">
+          <a><SidebarLink text="Profile" Icon={UserIcon} /> </a>
+        </Link>
+
         <SidebarLink text="More" Icon={DotsCircleHorizontalIcon} />
       </div>
       <button className="hidden xl:inline ml-auto bg-[#6a1edb] text-white rounded-full w-56 h-[52px] text-lg font-bold shadow-md hover:bg-[#6534e0]">
