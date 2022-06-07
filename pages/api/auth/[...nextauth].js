@@ -1,6 +1,6 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-import DiscordProvider from "next-auth/providers/discord";
+import RedditProvider from "next-auth/providers/reddit";
 import InstagramProvider from "next-auth/providers/instagram";
 import LinkedInProvider from "next-auth/providers/linkedin";
 
@@ -13,12 +13,9 @@ export default NextAuth({
     }),
     // ...add more providers here
 
-    DiscordProvider({
+    RedditProvider({
       clientId: process.env.DISCORD_CLIENT_ID,
       clientSecret: process.env.DISCORD_CLIENT_SECRET,
-      grant_type: 'authorization_code',
-      code: '/',
-      redirect_uri: 'localhost:3000'
     }),
 
     InstagramProvider({

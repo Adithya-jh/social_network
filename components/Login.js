@@ -20,7 +20,8 @@ function Login({ providers }) {
 
     <div className="container"></div>
       <div className="flex flex-col space-y-7 ">
-        {Object.values(providers).map((provider) => (
+        {
+        Object.values(providers).map((provider) => (
           <div key={provider.name}>
             {/* https://devdojo.com/tailwindcss/buttons#_ */}
             <button
@@ -34,6 +35,8 @@ function Login({ providers }) {
             </button>
           </div>
         ))}
+
+        
       </div>
     </div>
   );
