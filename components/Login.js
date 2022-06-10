@@ -2,24 +2,26 @@ import { signIn } from "next-auth/react";
 import Image from "next/image";
 // import World from '../World/world';
 import {useState} from "next"
+import hour from './assets/hour.png'
 
 
 function Login({ providers }) {
 
   return (
 
-    <div className="flex flex-col items-center space-y-20 pt-48 justify-center">
+    <div className="flex flex-col items-center space-y-20 pt-48 justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-[100vh]">
       {/* <Image
-        src="/assets/logo.png"
-        width={150}
+        src={hour}
+        width={300}
         height={150}
-        objectFit="conta
-        
-        in"
+        objectFit="contain"
       /> */}
 
-    <div className="container"></div>
+      
+      <div className="text-[30px] text-center text-bold font-sans">-----------  THE SOCIAL NETWORK   -----------</div>
+   
       <div className="flex flex-col space-y-7 ">
+       
         {
         Object.values(providers).map((provider) => (
           <div key={provider.name}>

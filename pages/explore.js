@@ -7,7 +7,7 @@ function explore({ trendingResults, followResults, providers }) {
   return (
       <div>
 
-          <div className="text-white">explore</div>
+          {/* <div className="text-white">explore</div> */}
       
           <Widgets className="flex min-h-screen  max-w-[1500px] mx-auto"
           trendingResults={trendingResults}
