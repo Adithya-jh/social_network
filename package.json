@@ -9,10 +9,12 @@
   "dependencies": {
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
+    "@react-three/fiber": "^8.0.26",
     "emoji-mart": "^3.0.1",
     "firebase": "^9.4.1",
     "firebase-tools": "^10.9.2",
     "framer-motion": "^6.3.11",
+    "framer-motion-3d": "^6.3.11",
     "glslify-loader": "^2.0.0",
     "moment": "^2.29.1",
     "next": "latest",

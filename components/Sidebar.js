@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { HomeIcon } from "@heroicons/react/solid";
-
+import {motion} from "framer-motion"
 import {
   HashtagIcon,
   BellIcon,
@@ -28,7 +28,7 @@ function Sidebar() {
       <div className="flex items-center justify-center w-14 h-14 hoverAnimation p-0 xl:ml-24">
         
       </div>
-      <div className="space-y-2.5 mt-4 mb-2.5 xl:ml-24">
+      <div className="space-y-7.5 mt-5 mb-4.5 xl:ml-24">
 
         <SidebarLink text="Home" Icon={HomeIcon} active />
         <Link href="/explore">
@@ -57,9 +57,14 @@ function Sidebar() {
 
         <SidebarLink text="More" Icon={DotsCircleHorizontalIcon} />
       </div>
-      <button className="hidden xl:inline ml-auto bg-[#6a1edb] text-white rounded-full w-56 h-[52px] text-lg font-bold shadow-md hover:bg-[#6534e0]">
+      <motion.button 
+        whileHover={{
+          scale: 1.2,
+          transition: { duration: 0.3 },
+        }}
+      className="hidden xl:inline ml-auto bg-[#6a1edb] text-white rounded-full w-56 h-[52px] text-lg font-bold shadow-md hover:bg-[#6534e0]">
         NETWORK
-      </button>
+      </motion.button>
       <div
         className="text-[#d9d9d9] flex items-center justify-center mt-auto hoverAnimation xl:ml-auto xl:-mr-5"
         onClick={signOut}

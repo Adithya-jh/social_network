@@ -11,22 +11,24 @@ function Login({ providers }) {
   return (
 
     // <div className="flex flex-col items-center space-y-20 pt-48 justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-[100vh]">
-    <div className={`flex flex-col items-center space-y-20 pt-48 justify-center bg-[${rr}]`}>
+    <div className="flex flex-col items-center space-y-20 pt-48 justify-center bg-[url('./assets/rr.png')]">
       {/* <Image
-        src={hour}
+        src={rr}
         width={300}
         height={150}
         objectFit="contain"
+        className="poistion-absolute top-0 left-0 h-[100vh] w-[100vh] z-[-10]"
       /> */}
 
       
       <motion.div
         // animate={{ rotate: 360 }}
         animate={{ x: [-600, 600, 0] }}
-        transition={{ duration: 1 }}
-     className="text-[30px] text-center text-bold font-sans text-[#ffffff] text-[font-mono]"> 
-     THE <span className="text-[#9981dd]">SOCIAL </span>NETWORK 
+        transition={{ duration: 1.0 }}
+     className="text-[30px] text-center text-bold font-sans text-[#ffffff] "> 
+     THE <span className="text-[#9981dd] font-BasementGrotesque">SOCIAL </span>NETWORK 
      <div className="text-[white] text-[10px]"># still more to style</div>
+
      </motion.div>
 
      {/* <motion.circle cx={500} animate={{ cx: [null, 100] }} className="bg-white"/> */}
