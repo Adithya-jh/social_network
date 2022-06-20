@@ -1,6 +1,6 @@
 module.exports = {
   images: {
-    domains: ["rb.gy"],
+    domains: ["rb.gy","www.istockphoto.com"],
   },
   reactStrictMode: true,
   i18n: {
